@@ -1,0 +1,63 @@
+{
+  "name": "encantus-api",
+  "version": "0.1.0",
+  "private": true,
+  "main": "app.js",
+  "dependencies": {
+    "@pinata/sdk": "^1.1.23",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/ejs": "^3.0.6",
+    "@types/express-fileupload": "^1.1.6",
+    "@types/morgan": "^1.9.2",
+    "@types/typescript": "^2.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "form-data": "^3.0.1",
+    "ipfs": "^0.55.3",
+    "ipfs-core": "^0.7.1",
+    "ipfs-http-client": "^50.1.1",
+    "morgan": "^1.10.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
+    "@types/node": "^15.0.2"
+  },
+  "engines": {
+    "node": "14.16.0"
+  },
+  "scripts": {
+    "start": "npm run build && npm run serve",
+    "serve": "node -r dotenv/config build/server.js",
+    "build": "npm run build-ts",
+    "build-ts": "tsc",
+    "eject": "react-scripts eject",
+    "ipfs-start": "jsipfs daemon"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
